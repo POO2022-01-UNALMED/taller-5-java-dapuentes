@@ -38,12 +38,16 @@ public class Zoologico {
 		this.zonas=nuevo;
 	}
 	
+	public void agregarZonas(Zona a){
+		a.setZoologico(this);
+		this.zonas.add(a);
+	}
+	
 	public int cantidadTotalAnimales() {
 		int x = 0;
 		for(int i = 0; i < zonas.size(); i++) {
 			x += zonas.get(i).cantidadAnimales();
-		}
+	}
 		return x;
-		}
-
+	}
 }
